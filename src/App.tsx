@@ -10,7 +10,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Insights from './pages/Insights';
-import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -26,7 +25,6 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/insights" element={<Insights />} />
-            <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
