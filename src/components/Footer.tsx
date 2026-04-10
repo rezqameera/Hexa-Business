@@ -7,10 +7,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-primary flex items-center justify-center rounded-sm">
-              <span className="text-black font-bold text-lg">H</span>
-            </div>
-            <span className="text-xl font-bold tracking-tighter">HEXA</span>
+            <img
+              src="/images/Hexa logo.png"
+              alt="Hexa Logo"
+              className="w-16 h-16 object-contain rounded-sm"
+            />
           </Link>
           <p className="text-white/60 text-sm leading-relaxed mb-8">
             A premier service provider and consulting firm dedicated to helping organizations create sustainable innovation.

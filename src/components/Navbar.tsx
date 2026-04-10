@@ -35,10 +35,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-black flex items-center justify-center rounded-sm group-hover:bg-primary transition-colors duration-300">
-            <span className="text-white font-bold text-xl group-hover:text-black">H</span>
-          </div>
-          <span className="text-2xl font-bold tracking-tighter text-black">HEXA</span>
+         <img src="/images/Hexa logo.png" alt="Hexa Logo" className="w-12 h-12 object-contain rounded-sm" />
         </Link>
 
         {/* Desktop Nav */}
