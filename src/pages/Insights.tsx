@@ -80,7 +80,7 @@ export default function Insights() {
           <div className="grid md:grid-cols-2 gap-12">
             {[
               { title: 'Digital Transformation for UNESCO', category: 'Technology', img: 'https://picsum.photos/seed/unesco/800/500' },
-              { title: 'Strategic Innovation with Save the Children', category: 'Consultancy', img: 'https://picsum.photos/seed/save/800/500' }
+              { title: 'Strategic Innovation with Hult Prize', category: 'Consultancy', img: 'https://picsum.photos/seed/hult/800/500' }
             ].map((item, i) => (
               <div key={i} className="group cursor-pointer">
                 <div className="overflow-hidden rounded-2xl mb-6">

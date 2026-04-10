@@ -35,8 +35,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
             <img 
-              src="https://picsum.photos/seed/team/800/600" 
-              alt="Our Team" 
+              src="https://picsum.photos/seed/creative-collaboration/800/600" 
+              alt="Creative Team Collaboration" 
               className="rounded-2xl shadow-xl"
               referrerPolicy="no-referrer"
             />

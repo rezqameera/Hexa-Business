@@ -1,16 +1,42 @@
-import { motion } from 'motion/react';
-import { ChevronRight, ArrowRight, Users, CheckCircle, Globe, Zap } from 'lucide-react';
+import { motion, useMotionValue, useTransform, animate, useInView } from 'motion/react';
+import { ChevronRight, ArrowRight, Users, Globe, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 
 const stats = [
-  { label: 'Years of innovations', value: '7+' },
-  { label: 'Projects completed', value: '153+' },
-  { label: 'Events organised', value: '78' },
-  { label: 'Happy clients globally', value: '50+' },
+  { label: 'Years of innovations', value: 9, suffix: '+' },
+  { label: 'Projects completed', value: 153, suffix: '+' },
+  { label: 'Events organised', value: 78, suffix: '' },
+  { label: 'Happy clients', value: 50, suffix: '+' },
 ];
 
-const partners = [
-  'European Union', 'UNESCO', 'UNFPA', 'Save the Children'
+function StatCounter({ value, suffix }: { value: number; suffix: string }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(count, value, { duration: 2, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [inView, value, count]);
+
+  return (
+    <span ref={ref}>
+      <motion.span>{rounded}</motion.span>
+      {suffix}
+    </span>
+  );
+}
+
+const partnersRow1 = [
+  'European Union', 'UNESCO', 'UNFPA', 'Hult Prize'
+];
+
+const partnersRow2 = [
+  'PMRS', 'Zwail City', 'Amos Trust', 'Code X'
 ];
 
 export default function Home() {
@@ -69,8 +95,12 @@ export default function Home() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary rounded-2xl -z-0 hidden md:block" />
-            <div className="absolute -top-10 -right-10 w-32 h-32 border-4 border-black rounded-full -z-0 hidden md:block" />
+            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] -z-0 hidden md:block" />
+            <div className="absolute -top-10 -right-10 w-32 h-32 -z-0 hidden md:block">
+              <svg viewBox="0 0 100 100" className="w-full h-full fill-none stroke-black stroke-[4]">
+                <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" />
+              </svg>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -88,7 +118,9 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-5xl font-bold mb-2 tracking-tighter">{stat.value}</div>
+                <div className="text-5xl font-bold mb-2 tracking-tighter">
+                  <StatCounter value={stat.value} suffix={stat.suffix} />
+                </div>
                 <div className="text-sm text-black/50 uppercase font-semibold tracking-wider">{stat.label}</div>
               </motion.div>
             ))}
@@ -100,10 +132,17 @@ export default function Home() {
       <section className="py-20 border-y border-black/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-black/40 mb-12">
-            Trusted by Global Organisations
+            TRUSTED BY GLOBAL AND LOCAL ORGANISATION
           </p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 mb-12">
+            {partnersRow1.map((partner) => (
+              <div key={partner} className="text-2xl font-bold tracking-tighter text-black/80">
+                {partner}
+              </div>
+            ))}
+          </div>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {partners.map((partner) => (
+            {partnersRow2.map((partner) => (
               <div key={partner} className="text-2xl font-bold tracking-tighter text-black/80">
                 {partner}
               </div>
