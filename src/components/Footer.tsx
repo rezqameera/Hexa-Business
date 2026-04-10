@@ -68,7 +68,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
         <p>© {new Date().getFullYear()} HEXA Business Consultancy. All rights reserved.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+          <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
           <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
         </div>

@@ -11,6 +11,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Insights from './pages/Insights';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />
