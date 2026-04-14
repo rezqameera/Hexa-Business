@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center gap-2 mb-6">
             <img
-              src="/images/Hexa logo.png"
+              src="../../images/Hexa logo.png"
               alt="Hexa Logo"
               className="w-16 h-16 object-contain rounded-sm"
             />

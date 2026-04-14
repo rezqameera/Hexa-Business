@@ -35,7 +35,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
-         <img src="/images/Hexa logo.png" alt="Hexa Logo" className="w-12 h-12 object-contain rounded-sm" />
+         <img src="../../images/Hexa logo.png" alt="Hexa Logo" className="w-12 h-12 object-contain rounded-sm" />
         </Link>
 
         {/* Desktop Nav */}
