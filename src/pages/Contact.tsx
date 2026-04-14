@@ -93,8 +93,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-sm text-black/40 font-bold uppercase tracking-widest mb-1">Telephone</div>
-                      <div className="text-xl font-bold">+44 28-58548</div>
-                      <div className="text-lg text-black/60">Mobile: 0592491468</div>
+                      <div className="text-xl font-bold">+44 734 5305 377</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">
@@ -117,7 +116,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-black/40 font-bold uppercase tracking-widest mb-1">Location</div>
-                    <div className="text-xl font-bold">London – second floor</div>
+                    <div className="text-xl font-bold">London </div>
                     <div className="text-lg text-black/60">United Kingdom</div>
                   </div>
                 </div>
@@ -127,7 +126,7 @@ export default function Contact() {
             {/* Map Placeholder */}
             <div className="mt-12 w-full h-64 bg-white rounded-3xl border border-black/5 overflow-hidden relative">
               <div className="absolute inset-0 flex items-center justify-center text-black/20 font-bold uppercase tracking-widest">
-                Interactive Map Placeholder
+                
               </div>
               <img 
                 src="https://picsum.photos/seed/map/800/400?blur=2" 
